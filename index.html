@@ -1,145 +1,547 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kampanye Hemat Energi Sekolah | Beranda</title>
+  <title>Kampanye Hemat Energi Sekolah | Inisiatif Konservasi Berbasis Data</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+
 <body>
 
+  <!-- 1. Header & Navigation -->
   <header class="navbar">
     <div class="container nav-container">
       <a href="index.html" class="logo">
+        <div class="logo-mark">
+          <i data-lucide="leaf" style="width: 18px; height: 18px;"></i>
+        </div>
         <span>Energi</span>Sekolah
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu Navigasi">
-        <span></span>
-        <span></span>
-        <span></span>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
+        <i data-lucide="menu" style="width: 22px; height: 22px;"></i>
       </button>
+
       <nav>
         <ul class="nav-links" id="navLinks">
           <li><a href="index.html" class="nav-link active">Beranda</a></li>
-          <li><a href="index (2).html" class="nav-link">Tentang</a></li>
+          <li><a href="data.html" class="nav-link">Data & Fakta</a></li>
+          <li><a href="aksi.html" class="nav-link">Aksi & Rekomendasi</a></li>
+          <li><a href="tentang.html" class="nav-link">Tentang</a></li>
         </ul>
       </nav>
+
+      <div class="nav-cta-wrapper">
+        <a href="aksi.html" class="btn btn-primary btn-sm">
+          Mulai Aksi
+          <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+        </a>
+      </div>
     </div>
   </header>
 
   <main>
+    <!-- 2. Hero Section -->
     <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <span class="badge">Kampanye Lingkungan Sekolah</span>
-          <h1>HEMAT ENERGI,<br><span>JAGA MASA DEPAN.</span></h1>
-          <p class="hero-tagline">"Mulai dari kebiasaan kecil di sekolah."</p>
-          <p class="hero-desc">
-            Mengajak siswa, guru, dan seluruh warga sekolah untuk lebih bijak dan bertanggung jawab dalam menggunakan energi listrik sehari-hari demi kelestarian lingkungan.
-          </p>
-          <div class="hero-actions">
-            <a href="#alasan" class="btn btn-primary">Kenali Kampanye</a>
-            <a href="index (2).html" class="btn btn-outline">Tentang Proyek</a>
-          </div>
-        </div>
-        <div class="hero-visual">
-          <img src="https://i.pinimg.com/1200x/c7/97/8b/c7978b96bd730c7f4be9f09396656c4d.jpg" alt="Hemat Energi Sekolah" class="hero-img">
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="alasan">
       <div class="container">
-        <div class="section-header">
-          <span class="badge">Refleksi Sehari-hari</span>
-          <h2>Mengapa Harus Hemat Energi?</h2>
-          <p>Banyak pemborosan listrik di sekolah terjadi dari kebiasaan kecil yang sering kita abaikan.</p>
+        <div class="hero-grid">
+          <div class="hero-content reveal-on-scroll">
+            <span class="badge">
+              <span class="badge-pulse-dot"></span>
+              Inisiatif Konservasi Energi Sekolah
+            </span>
+            <h1>
+              Langkah Nyata Menghemat Energi di Sekolah.<br>
+              <span>Dimulai Hari Ini.</span>
+            </h1>
+            <p class="hero-desc">
+              Platform kampanye berbasis data kuesioner 636 siswa kelas XI untuk mendorong efisiensi listrik, memutus
+              pemborosan daya siaga, dan membangun budaya peduli lingkungan yang berkelanjutan.
+            </p>
+            <div class="hero-actions">
+              <a href="data.html" class="btn btn-primary">
+                Jelajahi Bukti Data
+                <i data-lucide="bar-chart-3" style="width: 16px; height: 16px;"></i>
+              </a>
+              <a href="#kalkulator" class="btn btn-secondary">
+                Hitung Penghematan
+                <i data-lucide="calculator" style="width: 16px; height: 16px;"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal-on-scroll">
+            <div class="hero-visual-card">
+              <img src="assets/images/energy-bulb.jpg"
+                alt="Bohlam Hemat Energi dan Keberlanjutan Lingkungan" class="hero-img">
+              <div class="hero-floating-stat">
+                <div class="stat-icon-bubble">
+                  <i data-lucide="zap-off" style="width: 22px; height: 22px;"></i>
+                </div>
+                <div class="stat-bubble-text">
+                  <h4>3.5 Jam / Hari Pengurangan</h4>
+                  <p>Potensi pemangkasan durasi alat listrik menyala tanpa penghuni.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="grid-3">
-          <div class="card">
-            <div class="card-num">01</div>
-            <h3>Matikan Lampu Saat Kosong</h3>
-            <p>Ruang kelas dan toilet yang kosong sering kali dibiarkan terang benderang sepanjang jam istirahat hingga pulang sekolah.</p>
+
+        <!-- Quick Summary Bar -->
+        <div class="hero-stats-bar reveal-on-scroll">
+          <div class="hero-stat-item">
+            <div class="stat-num">636</div>
+            <div class="stat-txt">Siswa Kelas XI berpartisipasi aktif dalam audit perilaku energi.</div>
           </div>
-          <div class="card">
-            <div class="card-num">02</div>
-            <h3>Cabut Alat Elektronik</h3>
-            <p>Komputer lab, proyektor kelas, dan kipas angin sering tetap standby meski jam belajar mengajar telah selesai.</p>
+          <div class="hero-stat-item">
+            <div class="stat-num">18 Rombel</div>
+            <div class="stat-txt">Cakupan data lintas 7 kompetensi keahlian kejuruan sekolah.</div>
           </div>
-          <div class="card">
-            <div class="card-num">03</div>
-            <h3>Gunakan Seperlunya</h3>
-            <p>Manfaatkan pencahayaan matahari alami dan ventilasi udara saat siang hari sebelum menyalakan lampu berlebihan.</p>
+          <div class="hero-stat-item">
+            <div class="stat-num">96.2%</div>
+            <div class="stat-txt">Responden telah memiliki kesadaran dasar kategori Baik & Sangat Baik.</div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section bg-light">
+    <!-- 3. Section: Statistik Penggunaan & Kesadaran Energi (Animated Counters) -->
+    <section class="section section-muted" id="statistik">
       <div class="container">
-        <div class="section-header">
-          <span class="badge">Arah & Sasaran</span>
-          <h2>Tujuan Kampanye</h2>
-          <p>Langkah nyata bersama dalam menumbuhkan budaya peduli energi di sekolah.</p>
+        <div class="section-header reveal-on-scroll">
+          <span class="badge">Metrik Utama Kampanye</span>
+          <h2>Fakta Angka Penggunaan Energi</h2>
+          <p>Data kuantitatif yang dikumpulkan dari 636 siswa kelas XI untuk memetakan kebiasaan pemakaian listrik
+            harian.</p>
         </div>
-        <div class="grid-3">
-          <div class="card">
-            <div class="card-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
-              </svg>
+
+        <div class="stats-counter-grid">
+          <div class="counter-card reveal-on-scroll">
+            <div class="counter-card-icon">
+              <i data-lucide="users" style="width: 22px; height: 22px;"></i>
             </div>
-            <h3>Meningkatkan Kesadaran</h3>
-            <p>Memberikan edukasi kepada seluruh warga sekolah tentang pentingnya efisiensi listrik dan dampaknya bagi bumi.</p>
+            <div class="counter-value" data-target="636">0</div>
+            <div class="counter-label">Responden Siswa</div>
+            <div class="counter-desc">Tingkat partisipasi mencapai 99.4% dari total populasi terdata.</div>
           </div>
-          <div class="card">
-            <div class="card-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
+
+          <div class="counter-card reveal-on-scroll">
+            <div class="counter-card-icon">
+              <i data-lucide="award" style="width: 22px; height: 22px;"></i>
             </div>
-            <h3>Mengubah Kebiasaan</h3>
-            <p>Membiasakan tindakan proaktif seperti mengecek saklar lampu dan mematikan peralatan listrik yang tidak terpakai.</p>
+            <div class="counter-value" data-target="3.36" data-float="true" data-suffix="/4.0">0</div>
+            <div class="counter-label">Rata-rata Skor Perilaku</div>
+            <div class="counter-desc">Skor agregat Skala Likert 1–4 pada 10 butir instrumen kebiasaan.</div>
           </div>
-          <div class="card">
-            <div class="card-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 2a10 10 0 0 0-7.07 17.07C6.07 20.21 8.93 21 12 21s5.93-.79 7.07-1.93A10 10 0 0 0 12 2z"></path>
-                <path d="M12 6v10"></path>
-                <path d="M8 10l4-4 4 4"></path>
-              </svg>
+
+          <div class="counter-card reveal-on-scroll">
+            <div class="counter-card-icon">
+              <i data-lucide="check-circle-2" style="width: 22px; height: 22px;"></i>
             </div>
-            <h3>Membangun Sekolah Hijau</h3>
-            <p>Menciptakan lingkungan sekolah yang ramah lingkungan, hemat operasional energi, dan menjadi inspirasi bagi sekitar.</p>
+            <div class="counter-value" data-target="378">0</div>
+            <div class="counter-label">Kategori Sangat Baik</div>
+            <div class="counter-desc">59.4% siswa disiplin mematikan saklar dan mencabut steker alat.</div>
+          </div>
+
+          <div class="counter-card reveal-on-scroll">
+            <div class="counter-card-icon">
+              <i data-lucide="trending-down" style="width: 22px; height: 22px;"></i>
+            </div>
+            <div class="counter-value" data-target="25" data-suffix="%">0</div>
+            <div class="counter-label">Potensi Efisiensi Daya</div>
+            <div class="counter-desc">Estimasi beban listrik yang dapat dipangkas bila SOP dijalankan tertib.</div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- 4. Section: Informasi Dampak Pemborosan Energi -->
+    <section class="section" id="dampak">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="badge">Mengapa Harus Peduli?</span>
+          <h2>Dampak Nyata Pemborosan Listrik</h2>
+          <p>Meninggalkan saklar lampu, AC, atau komputer tetap menyala menimbulkan kerugian berantai bagi sekolah dan
+            bumi.</p>
+        </div>
+
+        <div class="impact-grid">
+          <div class="impact-card reveal-on-scroll">
+            <div class="impact-tag">Biaya Operasional</div>
+            <h3>Beban Finansial Sekolah</h3>
+            <p>
+              Arus listrik siaga (*standby power*) dari charger, proyektor, dan monitor lab yang tidak dicabut
+              menyumbang hingga 15% dari total tagihan listrik bulanan tanpa memberikan nilai manfaat belajar.
+            </p>
+            <div class="impact-highlight">
+              <span class="impact-highlight-num">15%</span>
+              <span class="impact-highlight-label">Beban listrik terbuang sia-sia</span>
+            </div>
+          </div>
+
+          <div class="impact-card reveal-on-scroll">
+            <div class="impact-tag">Dampak Iklim</div>
+            <h3>Pelepasan Emisi Karbon</h3>
+            <p>
+              Mayoritas pasokan listrik jaringan nasional masih bersumber dari pembangkit fosil batu bara. Setiap 1 kWh
+              listrik yang terbuang melepaskan rata-rata 0.85 kg emisi karbon (CO₂) ke atmosfer.
+            </p>
+            <div class="impact-highlight">
+              <span class="impact-highlight-num">0.85 kg</span>
+              <span class="impact-highlight-label">CO₂ dihasilkan per 1 kWh listrik</span>
+            </div>
+          </div>
+
+          <div class="impact-card reveal-on-scroll">
+            <div class="impact-tag">Ketahanan Alat</div>
+            <h3>Penyusutan Usia Perangkat</h3>
+            <p>
+              Komputer lab dan lampu yang dibiarkan menyala terus-menerus mengalami panas berlebih (*overheating*),
+              mempercepat kerusakan kapasitor, panel LCD, dan modul daya sebelum batas usia pakainya.
+            </p>
+            <div class="impact-highlight">
+              <span class="impact-highlight-num">2x Lipat</span>
+              <span class="impact-highlight-label">Risiko degradasi komponen alat</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Section: Interactive Energy-Saving Calculator -->
+    <section class="section section-muted" id="kalkulator">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="badge">Kalkulator Interaktif</span>
+          <h2>Simulasi Penghematan Energi Sekolah</h2>
+          <p>Geser nilai kontrol di bawah ini untuk melihat estimasi penghematan listrik, pengurangan biaya, dan
+            pencegahan emisi karbon per bulan.</p>
+        </div>
+
+        <div class="calculator-box reveal-on-scroll">
+          <div class="calculator-grid">
+            <div class="calc-inputs-wrapper">
+
+              <!-- Slider 1: Ruang Kelas -->
+              <div class="calc-input-group">
+                <div class="calc-label-row">
+                  <label class="calc-label" for="calcRooms">
+                    <i data-lucide="door-closed" style="width: 18px; height: 18px; color: var(--color-primary);"></i>
+                    Ruang Kelas Mematikan Lampu Saat Istirahat
+                  </label>
+                  <span class="calc-val-pill" id="valRooms">10 Ruang</span>
+                </div>
+                <input type="range" id="calcRooms" class="calc-slider" min="1" max="30" value="10" step="1">
+              </div>
+
+              <!-- Slider 2: PC Lab -->
+              <div class="calc-input-group">
+                <div class="calc-label-row">
+                  <label class="calc-label" for="calcComputers">
+                    <i data-lucide="monitor" style="width: 18px; height: 18px; color: var(--color-primary);"></i>
+                    Komputer Lab Di-Shutdown Tepat Waktu
+                  </label>
+                  <span class="calc-val-pill" id="valComputers">40 Unit PC</span>
+                </div>
+                <input type="range" id="calcComputers" class="calc-slider" min="5" max="150" value="40" step="5">
+              </div>
+
+              <!-- Slider 3: Jam AC -->
+              <div class="calc-input-group">
+                <div class="calc-label-row">
+                  <label class="calc-label" for="calcHours">
+                    <i data-lucide="wind" style="width: 18px; height: 18px; color: var(--color-primary);"></i>
+                    Pengurangan Jam Operasional Pendingin / Kipas
+                  </label>
+                  <span class="calc-val-pill" id="valHours">2 Jam / Hari</span>
+                </div>
+                <input type="range" id="calcHours" class="calc-slider" min="1" max="6" value="2" step="0.5">
+              </div>
+
+            </div>
+
+            <!-- Panel Hasil Real-time -->
+            <div class="calc-results-panel">
+              <div class="calc-results-header">
+                <h4>Estimasi Penghematan Bulanan</h4>
+                <p>Berdasarkan 22 hari kegiatan belajar mengajar.</p>
+              </div>
+
+              <div class="calc-output-item">
+                <div class="calc-output-num accent" id="calcOutKwh">0 kWh</div>
+                <div class="calc-output-label">Energi Listrik Dihemat per Bulan</div>
+              </div>
+
+              <div class="calc-output-item">
+                <div class="calc-output-num" id="calcOutCost">Rp 0</div>
+                <div class="calc-output-label">Estimasi Pengurangan Biaya Listrik</div>
+              </div>
+
+              <div class="calc-output-item">
+                <div class="calc-output-num" id="calcOutCarbon">0 kg</div>
+                <div class="calc-output-label">Emisi CO₂ yang Dicegah Masuk ke Atmosfer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Section: Progress Target Kampanye -->
+    <section class="section" id="target">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="badge">Indikator Kinerja</span>
+          <h2>Target Capaian Kampanye</h2>
+          <p>Tolok ukur keberhasilan implementasi program hemat energi di lingkungan sekolah.</p>
+        </div>
+
+        <div class="targets-box reveal-on-scroll">
+          <!-- Target 1 -->
+          <div class="target-row">
+            <div class="target-info">
+              <h4>Partisipasi Kuesioner Siswa</h4>
+              <p>636 responden dari total 639 siswa kelas XI.</p>
+            </div>
+            <div class="target-track-container">
+              <div class="target-track">
+                <div class="target-fill" style="width: 99.4%;"></div>
+              </div>
+            </div>
+            <div class="target-percentage">99.4%</div>
+          </div>
+
+          <!-- Target 2 -->
+          <div class="target-row">
+            <div class="target-info">
+              <h4>Adopsi SOP Lab Komputer</h4>
+              <p>Pelaksanaan 5 Menit Terakhir di Lab PPLG & MPLB.</p>
+            </div>
+            <div class="target-track-container">
+              <div class="target-track">
+                <div class="target-fill" style="width: 82%;"></div>
+              </div>
+            </div>
+            <div class="target-percentage">82.0%</div>
+          </div>
+
+          <!-- Target 3 -->
+          <div class="target-row">
+            <div class="target-info">
+              <h4>Pengurangan Durasi Standby</h4>
+              <p>Penurunan jam lampu/AC menyala saat kelas kosong.</p>
+            </div>
+            <div class="target-track-container">
+              <div class="target-track">
+                <div class="target-fill" style="width: 74%;"></div>
+              </div>
+            </div>
+            <div class="target-percentage">74.0%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Section: Tips Praktis Harian -->
+    <section class="section section-muted" id="tips">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="badge">Panduan Praktis</span>
+          <h2>Kebiasaan Kecil, Dampak Nyata</h2>
+          <p>Tindakan mudah yang dapat kamu mulai lakukan hari ini di berbagai sudut sekolah.</p>
+        </div>
+
+        <div class="daily-tips-tabs reveal-on-scroll">
+          <button class="tip-tab-btn active" data-tip-tab="all">Semua Area</button>
+          <button class="tip-tab-btn" data-tip-tab="kelas">Ruang Kelas</button>
+          <button class="tip-tab-btn" data-tip-tab="lab">Lab Komputer</button>
+          <button class="tip-tab-btn" data-tip-tab="publik">Fasilitas Umum</button>
+        </div>
+
+        <div class="tips-content-panel">
+          <!-- Tip 1 -->
+          <div class="tip-clean-card reveal-on-scroll" data-tip-panel="kelas">
+            <div class="tip-icon-header">
+              <i data-lucide="sun" style="width: 20px; height: 20px;"></i>
+            </div>
+            <h4>Manfaatkan Cahaya Alami</h4>
+            <p>Buka tirai jendela pada pagi hari pukul 07.00–10.00 dan matikan baris lampu yang berada di samping
+              jendela.</p>
+          </div>
+
+          <!-- Tip 2 -->
+          <div class="tip-clean-card reveal-on-scroll" data-tip-panel="kelas">
+            <div class="tip-icon-header">
+              <i data-lucide="power" style="width: 20px; height: 20px;"></i>
+            </div>
+            <h4>Zero Watt Saat Istirahat</h4>
+            <p>Biasakan mematikan saklar lampu dan kipas angin setiap kali seluruh siswa keluar kelas untuk istirahat
+              atau olahraga.</p>
+          </div>
+
+          <!-- Tip 3 -->
+          <div class="tip-clean-card reveal-on-scroll" data-tip-panel="lab">
+            <div class="tip-icon-header">
+              <i data-lucide="monitor-off" style="width: 20px; height: 20px;"></i>
+            </div>
+            <h4>Proper Shut Down PC Lab</h4>
+            <p>Matikan monitor dan unit PC melalui menu Shut Down resmi 5 menit sebelum bel jam pelajaran praktikum
+              berakhir.</p>
+          </div>
+
+          <!-- Tip 4 -->
+          <div class="tip-clean-card reveal-on-scroll" data-tip-panel="lab">
+            <div class="tip-icon-header">
+              <i data-lucide="plug-zap" style="width: 20px; height: 20px;"></i>
+            </div>
+            <h4>Putus Steker Terminal Meja</h4>
+            <p>Cabut kabel charger laptop setelah daya baterai terisi penuh untuk menghentikan konsumsi daya siaga
+              (*vampire power*).</p>
+          </div>
+
+          <!-- Tip 5 -->
+          <div class="tip-clean-card reveal-on-scroll" data-tip-panel="publik">
+            <div class="tip-icon-header">
+              <i data-lucide="lightbulb-off" style="width: 20px; height: 20px;"></i>
+            </div>
+            <h4>Matikan Lampu Toilet Kosong</h4>
+            <p>Periksa saklar saat meninggalkan kamar mandi sekolah. Jangan biarkan lampu menyala saat tidak ada orang
+              di dalam.</p>
+          </div>
+
+          <!-- Tip 6 -->
+          <div class="tip-clean-card reveal-on-scroll" data-tip-panel="publik">
+            <div class="tip-icon-header">
+              <i data-lucide="message-square" style="width: 20px; height: 20px;"></i>
+            </div>
+            <h4>Saling Mengingatkan Tanpa Sungkan</h4>
+            <p>Ajak teman dengan sapaan hangat untuk bersama-sama menjaga saklar listrik di ruang bersama tetap
+              terkontrol.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Section: Alur Kampanye 3 Langkah -->
     <section class="section">
       <div class="container">
-        <div class="cta-banner">
-          <div>
-            <h3>Kenali Lebih Dekat Proyek Ini</h3>
-            <p>Pelajari latar belakang lengkap serta susunan tim di balik kampanye hemat energi.</p>
+        <div class="section-header reveal-on-scroll">
+          <span class="badge">Metodologi Kampanye</span>
+          <h2>Alur Sistematis dari Data ke Aksi</h2>
+          <p>Tiga tahapan terukur yang menghubungkan kesadaran, verifikasi angka, hingga pembiasaan nyata.</p>
+        </div>
+
+        <div class="flow-steps-grid">
+          <div class="flow-step-item reveal-on-scroll">
+            <div class="flow-step-badge">1</div>
+            <h3>Pahami Masalah</h3>
+            <p>Mengidentifikasi titik-titik pemborosan listrik di sekolah yang kerap diabaikan dalam rutinitas belajar
+              sehari-hari.</p>
           </div>
-          <a href="index (2).html" class="btn">Buka Halaman Tentang</a>
+
+          <div class="flow-step-item reveal-on-scroll">
+            <div class="flow-step-badge">2</div>
+            <h3>Pelajari Bukti Data</h3>
+            <p>Menganalisis hasil kuesioner 636 responden untuk melihat butir kebiasaan yang membutuhkan perhatian
+              khusus.</p>
+          </div>
+
+          <div class="flow-step-item reveal-on-scroll">
+            <div class="flow-step-badge">3</div>
+            <h3>Lakukan Aksi Nyata</h3>
+            <p>Menerapkan 4 rekomendasi konkret, mengikuti Tantangan 7 Hari, dan menetapkan komitmen hemat energi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Section: Ajakan Berpartisipasi & Banner CTA -->
+    <section class="section section-sm">
+      <div class="container">
+        <div class="cta-banner reveal-on-scroll">
+          <div>
+            <span class="badge badge-white">Ayo Ambil Peran</span>
+            <h2>Perubahan Nyata Dimulai dari Kelasmu</h2>
+            <p>Lihat visualisasi data lengkap atau langsung terapkan rekomendasi konkret untuk menciptakan sekolah hijau
+              yang berkelanjutan.</p>
+          </div>
+          <div class="cta-banner-actions">
+            <a href="data.html" class="btn btn-secondary">
+              Lihat Grafik Data
+            </a>
+            <a href="aksi.html" class="btn btn-accent">
+              Ikuti Tantangan 7 Hari
+              <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+            </a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- 10. Footer Informatif -->
   <footer class="footer">
     <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-mark">
+              <i data-lucide="leaf" style="width: 18px; height: 18px;"></i>
+            </div>
+            <span>Energi</span>Sekolah
+          </a>
+          <p>
+            Inisiatif kampanye digital efisiensi energi berbasis data kuesioner 636 siswa untuk mewujudkan ekosistem
+            sekolah ramah lingkungan.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigasi</h4>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="data.html">Data & Fakta</a></li>
+            <li><a href="aksi.html">Aksi & Rekomendasi</a></li>
+            <li><a href="tentang.html">Tentang Proyek</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Eksplorasi</h4>
+          <ul>
+            <li><a href="#kalkulator">Kalkulator Energi</a></li>
+            <li><a href="#tips">Tips Sehari-hari</a></li>
+            <li><a href="aksi.html#tantangan">Tantangan 7 Hari</a></li>
+            <li><a href="data.html#tabel">Rincian 10 Butir</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Identitas Pengembang</h4>
+          <ul>
+            <li><strong>Kelompok 10</strong></li>
+            <li>Rombel PPLG XI-4</li>
+            <li>Konsentrasi Rekayasa Perangkat Lunak</li>
+            <li>SMK Wikrama Bogor</li>
+          </ul>
+        </div>
+      </div>
+
       <div class="footer-bottom">
-        <p>&copy; 2026 Kampanye Hemat Energi Sekolah. Tugas Fase 1.</p>
+        <p>&copy; 2026 Kampanye Hemat Energi Sekolah. Seluruh hak cipta dilindungi undang-undang.</p>
+        <p>Data dilindungi &bull; Agregasi anonim 636 responden</p>
       </div>
     </div>
   </footer>
 
   <script src="js/script.js"></script>
 </body>
+
 </html>
