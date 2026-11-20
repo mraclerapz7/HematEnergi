@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data & Fakta Penggunaan Energi | Kampanye Hemat Energi Sekolah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- 1. Header & Navigation -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-mark">
+          <i data-lucide="leaf" style="width: 18px; height: 18px;"></i>
+        </div>
+        <span>Energi</span>Sekolah
+      </a>
+      
+      <button class="nav-toggle" id="navToggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
+        <i data-lucide="menu" style="width: 22px; height: 22px;"></i>
+      </button>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="nav-link">Beranda</a></li>
+          <li><a href="data.html" class="nav-link active">Data & Fakta</a></li>
+          <li><a href="aksi.html" class="nav-link">Aksi & Rekomendasi</a></li>
+          <li><a href="tentang.html" class="nav-link">Tentang</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta-wrapper">
+        <a href="aksi.html" class="btn btn-primary btn-sm">
+          Mulai Aksi
+          <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <div class="page-header-content">
+        <span class="badge">
+          <i data-lucide="database" style="width: 14px; height: 14px;"></i>
+          Bukti Nyata Kampanye
+        </span>
+        <h1>Data & Fakta Penggunaan Energi</h1>
+        <p>Analisis kuantitatif dari kuesioner 636 siswa kelas XI lintas 7 kompetensi keahlian dan 7 rayon sebagai fondasi perumusan kebijakan hemat energi sekolah.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Main Content -->
+  <main class="section">
+    <div class="container">
+
+      <!-- Kartu Ringkasan Metrik -->
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-value" id="statTotalResponden">636</div>
+          <div class="stat-label">Total Responden</div>
+          <div class="stat-desc">Partisipasi 99.4% siswa Kelas XI</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="statRataSkor">3.36/4.0</div>
+          <div class="stat-label">Rata-rata Skor</div>
+          <div class="stat-desc">Kategori Baik & Disiplin</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="statSangatBaik">59.4%</div>
+          <div class="stat-label">Kategori Sangat Baik</div>
+          <div class="stat-desc">378 siswa konsisten hemat energi</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="statFokusKampanye">3.22</div>
+          <div class="stat-label">Fokus Kampanye</div>
+          <div class="stat-desc">Skor terendah: Batasi gawai & ajak teman</div>
+        </div>
+      </div>
+
+      <!-- Grid Grafik Chart.js -->
+      <div class="charts-grid">
+
+        <!-- Grafik 1: Distribusi Kategori Perilaku -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <h3 class="chart-title">Distribusi Kategori Perilaku Siswa</h3>
+            <p class="chart-subtitle">Pengelompokan 636 siswa berdasarkan rata-rata skor butir (skala 1–4).</p>
+          </div>
+          <div class="chart-container">
+            <canvas id="chartKategori"></canvas>
+          </div>
+          <div class="chart-explanation">
+            <strong>Kesimpulan:</strong> Sebanyak <strong>96.2%</strong> siswa kelas XI telah berada pada kategori Baik hingga Sangat Baik, dengan hanya 3.8% yang masih berkategori Cukup dan Kurang.
+          </div>
+        </div>
+
+        <!-- Grafik 2: Rata-rata Skor per Butir Pernyataan -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <h3 class="chart-title">Rata-Rata Skor per Butir Perilaku (P01 - P10)</h3>
+            <p class="chart-subtitle">Perbandingan penerapan kebiasaan hemat energi spesifik sehari-hari.</p>
+          </div>
+          <div class="chart-container">
+            <canvas id="chartButir"></canvas>
+          </div>
+          <div class="chart-explanation">
+            <strong>Kesimpulan:</strong> Mencabut kabel steker dan tindakan nyata beroleh skor tinggi (&gt;3.45), namun pembatasan durasi gawai serta keberanian menegur teman (keduanya 3.22) menjadi titik paling krusial yang memerlukan dorongan kampanye.
+          </div>
+        </div>
+
+        <!-- Grafik 3: Rata-rata Skor Berdasarkan Jurusan -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <h3 class="chart-title">Rata-Rata Skor Berdasarkan Jurusan</h3>
+            <p class="chart-subtitle">Tingkat penerapan hemat energi pada 7 kompetensi keahlian kelas XI.</p>
+          </div>
+          <div class="chart-container">
+            <canvas id="chartJurusan"></canvas>
+          </div>
+          <div class="chart-explanation">
+            <strong>Kesimpulan:</strong> Jurusan Pemasaran (PMN) memimpin dengan rata-rata 3.51, sedangkan jurusan praktikum komputer intensif seperti PPLG (3.24) memerlukan sosialisasi penghematan daya perangkat.
+          </div>
+        </div>
+
+        <!-- Grafik 4: Rata-rata Skor Berdasarkan Rayon -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <h3 class="chart-title">Rata-Rata Skor Berdasarkan Rayon</h3>
+            <p class="chart-subtitle">Sebaran skor kepedulian hemat energi pada 7 rayon tempat tinggal siswa.</p>
+          </div>
+          <div class="chart-container">
+            <canvas id="chartRayon"></canvas>
+          </div>
+          <div class="chart-explanation">
+            <strong>Kesimpulan:</strong> Penerapan hemat energi relatif stabil dan merata di seluruh rayon (skor 3.31 – 3.41), dengan Rayon Tajur dan Cicurug mencatat rata-rata tertinggi.
+          </div>
+        </div>
+
+        <!-- Tabel Rincian 10 Butir Kuesioner (Full width) -->
+        <div class="chart-card chart-card-full" id="tabel">
+          <div class="chart-header">
+            <h3 class="chart-title">Rincian Lengkap 10 Butir Instrumen Kuesioner</h3>
+            <p class="chart-subtitle">Data lengkap instrumen evaluasi perilaku hemat energi yang diisi oleh 636 responden.</p>
+          </div>
+          <div class="table-responsive">
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th style="width: 70px;">Kode</th>
+                  <th>Pernyataan Instrumen Kuesioner</th>
+                  <th style="width: 130px;">Rata-rata Skor</th>
+                  <th style="width: 140px;">Persen Sering/Selalu</th>
+                </tr>
+              </thead>
+              <tbody id="tabelDetailButir">
+                <!-- Diisi otomatis oleh JavaScript js/data.js -->
+              </tbody>
+            </table>
+          </div>
+          <div class="chart-explanation" style="margin-top: 20px;">
+            <strong>Catatan Analisis:</strong> Butir P04 (Membatasi gawai) dan P09 (Menegur teman) memiliki persentase jawaban "jarang/tidak pernah" tertinggi (~13%), menjadikannya target edukasi utama dalam materi kampanye sekolah.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Banner Navigasi ke Aksi -->
+      <div class="cta-banner">
+        <div>
+          <span class="badge badge-white">Solusi Berdasarkan Angka</span>
+          <h2>Data Telah Berbicara: Saatnya Beraksi Nyata!</h2>
+          <p>Setelah melihat fakta angka di atas, mari terapkan 4 rekomendasi konkret dan ikuti Tantangan 7 Hari Hemat Energi di kelasmu.</p>
+        </div>
+        <div class="cta-banner-actions">
+          <a href="aksi.html" class="btn btn-accent">
+            Buka Halaman Aksi
+            <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- 4. Footer Informatif -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-mark">
+              <i data-lucide="leaf" style="width: 18px; height: 18px;"></i>
+            </div>
+            <span>Energi</span>Sekolah
+          </a>
+          <p>
+            Inisiatif kampanye digital efisiensi energi berbasis data kuesioner 636 siswa untuk mewujudkan ekosistem sekolah ramah lingkungan.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigasi</h4>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="data.html">Data & Fakta</a></li>
+            <li><a href="aksi.html">Aksi & Rekomendasi</a></li>
+            <li><a href="tentang.html">Tentang Proyek</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Eksplorasi</h4>
+          <ul>
+            <li><a href="index.html#kalkulator">Kalkulator Energi</a></li>
+            <li><a href="aksi.html#tantangan">Tantangan 7 Hari</a></li>
+            <li><a href="#tabel">Tabel 10 Butir</a></li>
+            <li><a href="aksi.html#ikrar">Kartu Komitmen</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Identitas Pengembang</h4>
+          <ul>
+            <li><strong>Kelompok 10</strong></li>
+            <li>Rombel PPLG XI-4</li>
+            <li>Konsentrasi Rekayasa Perangkat Lunak</li>
+            <li>SMK Wikrama Bogor</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Kampanye Hemat Energi Sekolah. Seluruh hak cipta dilindungi undang-undang.</p>
+        <p>Data dilindungi &bull; Agregasi anonim 636 responden</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/data.js"></script>
+</body>
+</html>
