@@ -3,69 +3,132 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kampanye Hemat Energi Sekolah | Tentang</title>
+  <title>Tentang Kampanye | Kampanye Hemat Energi Sekolah</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
+  <!-- 1. Header & Navigation -->
   <header class="navbar">
     <div class="container nav-container">
       <a href="index.html" class="logo">
+        <div class="logo-mark">
+          <i data-lucide="leaf" style="width: 18px; height: 18px;"></i>
+        </div>
         <span>Energi</span>Sekolah
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu Navigasi">
-        <span></span>
-        <span></span>
-        <span></span>
+      
+      <button class="nav-toggle" id="navToggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
+        <i data-lucide="menu" style="width: 22px; height: 22px;"></i>
       </button>
+
       <nav>
         <ul class="nav-links" id="navLinks">
           <li><a href="index.html" class="nav-link">Beranda</a></li>
-          <li><a href="index (2).html" class="nav-link active">Tentang</a></li>
+          <li><a href="data.html" class="nav-link">Data & Fakta</a></li>
+          <li><a href="aksi.html" class="nav-link">Aksi & Rekomendasi</a></li>
+          <li><a href="tentang.html" class="nav-link active">Tentang</a></li>
         </ul>
       </nav>
+
+      <div class="nav-cta-wrapper">
+        <a href="aksi.html" class="btn btn-primary btn-sm">
+          Mulai Aksi
+          <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+        </a>
+      </div>
     </div>
   </header>
 
+  <!-- 2. Page Header -->
   <section class="page-header">
     <div class="container">
-      <span class="badge">Informasi Proyek</span>
-      <h1>Tentang Kampanye</h1>
-      <p>Latar belakang, sasaran inisiatif, dan identitas pengembang kampanye.</p>
+      <div class="page-header-content">
+        <span class="badge">
+          <i data-lucide="info" style="width: 14px; height: 14px;"></i>
+          Informasi Proyek
+        </span>
+        <h1>Tentang Kampanye Hemat Energi</h1>
+        <p>Latar belakang inisiatif, sasaran program, metodologi pengembangan, serta profil tim pengembang Kelompok 10 PPLG XI-4.</p>
+      </div>
     </div>
   </section>
 
+  <!-- 3. Main Content -->
   <main class="section">
     <div class="container">
       <div class="about-grid">
+        
+        <!-- Kolom Konten Kiri -->
         <div class="about-content">
+          
           <div class="about-card">
-            <h3>Latar Belakang Kampanye</h3>
+            <h3>Latar Belakang & Urgensi</h3>
             <p>
-              Sekolah merupakan fasilitas umum dengan pemakaian listrik yang sangat intensif setiap harinya, mulai dari penerangan puluhan kelas, proyektor, hingga laboratorium komputer.
+              Sekolah merupakan fasilitas publik dengan intensitas pemakaian energi listrik yang sangat tinggi setiap harinya. Ratusan unit komputer laboratorium, puluhan proyektor kelas, sistem pendingin udara, serta lampu penerangan beroperasi secara simultan sepanjang jam pelajaran.
             </p>
             <p>
-              Meskipun kebutuhan energi tinggi, kesadaran efisiensi sering terabaikan. Masih banyak perangkat dan lampu yang menyala di ruang kosong atau setelah jam belajar usai.
+              Meskipun kebutuhan energi tinggi, observasi dan hasil evaluasi menunjukkan bahwa kesadaran mematikan perangkat saat tidak digunakan masih sering terabaikan. Berbagai perangkat sering dibiarkan menyala di ruangan kosong saat jam istirahat atau tetap terhubung ke stopkontak seusai jam pulang sekolah.
             </p>
             <p>
-              Melalui media kampanye berbasis web ini, kami ingin menumbuhkan kesadaran bersama agar seluruh warga sekolah turut menjaga konsumsi energi secara lebih bijak dan bertanggung jawab.
+              Melalui media kampanye berbasis web yang profesional dan berbasis data analitis ini, kami menghadirkan jembatan antara kesadaran teori dan pembiasaan nyata agar seluruh warga sekolah dapat berkolaborasi mewujudkan budaya hemat energi berkelanjutan.
             </p>
           </div>
 
           <div class="about-card">
-            <h3>Tujuan Utama</h3>
-            <p>1. <strong>Menumbuhkan kesadaran kolektif</strong> pentingnya konservasi energi bagi keberlangsungan lingkungan.</p>
-            <p>2. <strong>Mendorong pembiasaan hemat listrik</strong> seperti mematikan lampu dan memutus arus perangkat yang tidak dipakai.</p>
-            <p>3. <strong>Menyediakan media informasi digital</strong> yang informatif, menarik, dan mudah dipahami siswa maupun staf sekolah.</p>
+            <h3>Tujuan Utama Inisiatif</h3>
+            <p>
+              1. <strong>Membangun Kesadaran Kuantitatif:</strong> Menyajikan data nyata dari 636 responden siswa kelas XI agar warga sekolah memahami perilaku mana yang telah baik dan aspek mana yang paling membutuhkan perbaikan.
+            </p>
+            <p>
+              2. <strong>Memberikan Panduan Aksi Terarah:</strong> Merumuskan 4 rekomendasi konkret yang dapat dieksekusi langsung tanpa membebani rutinitas belajar mengajar.
+            </p>
+            <p>
+              3. <strong>Mendorong Keterlibatan Aktif:</strong> Memfasilitasi partisipasi siswa melalui alat bantu interaktif seperti kalkulator penghematan, tantangan 7 hari, dan ikrar komitmen digital.
+            </p>
           </div>
+
+          <!-- Roadmap / Linimasa Fase Proyek -->
+          <div class="about-card">
+            <h3>Linimasa Tahapan Proyek</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-marker">1</div>
+                <div class="timeline-content">
+                  <h4>Fase 1: Perancangan Konsep & Fondasi Desain</h4>
+                  <p>Penyusunan kerangka kampanye, penataan arsitektur informasi, serta perancangan antarmuka dasar Beranda dan Tentang.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-marker">2</div>
+                <div class="timeline-content">
+                  <h4>Fase 2: Integrasi Data & Visualisasi Chart.js</h4>
+                  <p>Pengolahan dataset riil hasil kuesioner 636 siswa kelas XI, pembuatan struktur JSON modular, dan visualisasi grafik interaktif.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item active">
+                <div class="timeline-marker">3</div>
+                <div class="timeline-content">
+                  <h4>Fase 3: Aksi Konkret, Interaktivitas & Final Polishing</h4>
+                  <p>Perumusan 4 rekomendasi berbasis data, pembangunan kalkulator energi, tantangan 7 hari, perbaikan UI/UX profesional berstandar industri.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
+        <!-- Kolom Sidebar Kanan: Identitas Tim -->
         <aside class="about-sidebar">
           <div class="identity-card">
-            <h3>Identitas Proyek</h3>
+            <h3>Identitas Pengembang</h3>
             <ul class="identity-list">
               <li class="identity-item">
                 <span class="identity-label">Kelompok</span>
@@ -76,8 +139,12 @@
                 <span class="identity-value">PPLG XI-4</span>
               </li>
               <li class="identity-item">
-                <span class="identity-label">Jurusan</span>
-                <span class="identity-value">PPLG</span>
+                <span class="identity-label">Konsentrasi</span>
+                <span class="identity-value">PPLG / RPL</span>
+              </li>
+              <li class="identity-item">
+                <span class="identity-label">Institusi</span>
+                <span class="identity-value">SMK Wikrama Bogor</span>
               </li>
               <li class="identity-item">
                 <span class="identity-label">Developer</span>
@@ -92,20 +159,67 @@
                 <span class="identity-value">Vandjalu Gani Albar</span>
               </li>
               <li class="identity-item">
-                <span class="identity-label">Tahapan</span>
-                <span class="identity-value">Fase 1 (Tampilan)</span>
+                <span class="identity-label">Status Proyek</span>
+                <span class="identity-value text-primary">Fase 3 (Selesai & Terverifikasi)</span>
               </li>
             </ul>
           </div>
         </aside>
+
       </div>
     </div>
   </main>
 
+  <!-- 4. Footer Informatif -->
   <footer class="footer">
     <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-mark">
+              <i data-lucide="leaf" style="width: 18px; height: 18px;"></i>
+            </div>
+            <span>Energi</span>Sekolah
+          </a>
+          <p>
+            Inisiatif kampanye digital efisiensi energi berbasis data kuesioner 636 siswa untuk mewujudkan ekosistem sekolah ramah lingkungan.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigasi</h4>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="data.html">Data & Fakta</a></li>
+            <li><a href="aksi.html">Aksi & Rekomendasi</a></li>
+            <li><a href="tentang.html">Tentang Proyek</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Eksplorasi</h4>
+          <ul>
+            <li><a href="index.html#kalkulator">Kalkulator Energi</a></li>
+            <li><a href="aksi.html#tantangan">Tantangan 7 Hari</a></li>
+            <li><a href="data.html#tabel">Rincian 10 Butir</a></li>
+            <li><a href="aksi.html#ikrar">Kartu Komitmen</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Identitas Pengembang</h4>
+          <ul>
+            <li><strong>Kelompok 10</strong></li>
+            <li>Rombel PPLG XI-4</li>
+            <li>Konsentrasi Rekayasa Perangkat Lunak</li>
+            <li>SMK Wikrama Bogor</li>
+          </ul>
+        </div>
+      </div>
+
       <div class="footer-bottom">
-        <p>&copy; 2026 Kampanye Hemat Energi Sekolah. Tugas Fase 1.</p>
+        <p>&copy; 2026 Kampanye Hemat Energi Sekolah. Seluruh hak cipta dilindungi undang-undang.</p>
+        <p>Data dilindungi &bull; Agregasi anonim 636 responden</p>
       </div>
     </div>
   </footer>
